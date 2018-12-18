@@ -1,4 +1,3 @@
 # movies-api
 manage users,
-authentication and autoraization
-
+authentication and autoraization, manage for each user his movies collection
