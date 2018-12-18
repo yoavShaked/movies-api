@@ -1,4 +1,4 @@
 # movies-api
-manage users
-authentication and autoraization for users
+manage users,
+authentication and autoraization
 
