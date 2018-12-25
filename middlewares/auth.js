@@ -4,6 +4,7 @@ env.config();
 
 module.exports = (request, response, next) => {
     const token = request.header('x-auth');
+    console.log(token);
     if(!token){
         return response.status(401).send('Access denide. No token provided.');
     }
