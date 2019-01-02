@@ -6,9 +6,13 @@ const express = require('express');
 const error = require('../middlewares/error');
 const bodyParser = require('body-parser');
 
+const corsOptions = {
+    exposedHeaders: 'x_token',
+};
+
 module.exports = (app) => {
-    app.use(cors());
-    app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(cors(corsOptions));
+    app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json())
     app.use(express.json());
     app.use('/api/users', users);

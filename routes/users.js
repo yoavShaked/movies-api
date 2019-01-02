@@ -17,7 +17,8 @@ router.post('/', validateUser,async (request, response) => {
     user.password = await bcrypt.hash(password, salt);
     await user.save();
     const token = user.genToken();
-    response.header('x-token', token).send({name, email});
+
+    response.header('x_token', token).send({name, email});
 });
 
 module.exports = router;

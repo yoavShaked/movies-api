@@ -8,5 +8,4 @@ router.post('/',validateUser, checkAuth, async (request, response) => {
     response.header('x-auth', token).send({name:user.name, email: user.email});
 });
 
-
 module.exports = router;
